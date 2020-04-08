@@ -1,7 +1,7 @@
 # Social-media-word-counter
-This is an app that counts the number of characters in a social media text area
+This is an app that counts the number of characters in a social media text area designed using HTML, CSS and javaScript
 ## Installation
-There is no special Installation is needed to install Social-media-word-counter
+There is no special Installation needed to install Social-media-word-counter
 ## Usage
 ```javaScript
 import Social-media-word-counter
