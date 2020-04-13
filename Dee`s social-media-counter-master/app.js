@@ -25,14 +25,12 @@
 
 /*****Getting variables*******/
 const message = document.querySelector('#message');
-const x = document.querySelector('#text');
-const y = x.value.length;
+const text = document.querySelector('#text');
+const textVal = text.value.length;
 let count = document.querySelector('#count');
 let media = document.myForm.media;
 const words = document.querySelector('#words');
 let limit;
-const wordsLeft = limit - y;
-//const maxlent = x.maxLength = limit;
 
 /******Looping through all the radio Buttons*******/
 for(let i = 0; i<media.length; i++){
@@ -41,9 +39,8 @@ if(media[0].checked){
    limit = 280;
    count.innerHTML = 0
    words.innerHTML = limit
-   let maxlent = x.maxLength = limit;
-   //x.reset();
-   x.value = '';
+   let maxlent = text.maxLength = limit;
+   text.value = '';
    message.innerHTML = '';
    console.log('twitter')
   
@@ -51,9 +48,8 @@ if(media[0].checked){
    limit = 63206;
    count.innerHTML = 0
    words.innerHTML = limit
-   maxlent = x.maxLength = limit;
-   //x.reset();
-   x.value = '';
+   maxlent = text.maxLength = limit;
+   text.value = '';
    message.innerHTML = '';
    console.log('facebook')
   
@@ -61,9 +57,8 @@ if(media[0].checked){
    limit = 2200;
    count.innerHTML = 0
    words.innerHTML = limit
-   maxlent = x.maxLength = limit;
-   //x.reset();
-   x.value = '';
+   maxlent = text.maxLength = limit;
+   text.value = '';
    message.innerHTML = '';
    console.log('instagram')
    
@@ -71,9 +66,8 @@ if(media[0].checked){
    limit = 8000;
    count.innerHTML = 0
    words.innerHTML = limit 
-   maxlent = x.maxLength = limit;
-   //x.reset();
-   x.value = '';
+   maxlent = text.maxLength = limit;
+   text.value = '';
    message.innerHTML = '';
    console.log('others')
   
@@ -84,28 +78,15 @@ if(media[0].checked){
 )
 {
    /*********Adding a keyup event listener to textarea to listen for keyboard input***********/
-   x.addEventListener('keyup', ()=>{
+   text.addEventListener('keyup', ()=>{
          if(media[0].checked || media[1].checked || media[2].checked || media[3].checked){
-           count.innerHTML =x.value.length;
-           words.innerHTML = limit - x.value.length;
-           if (x.value.length === limit){
-            message.innerHTML = 'Congratulations you have successfully entered the required number of Characters';
+           count.innerHTML =text.value.length;
+           words.innerHTML = limit - text.value.length;
+           if (text.value.length === limit){
+            message.innerHTML = 'Congratulations you have entered the required number of Characters';
          }else{
             
          }
          }
-        /* else if(media[1].checked){
-           count.innerHTML +=x.value.length;
-           words.innerHTML += limit -x.value.length;
-        }else if(media[2].checked){
-           count.innerHTML += x.value.length;
-           words.innerHTML += limit -x.value.length;
-        }else if(media[3].checked){
-           count.innerHTML += x.value.length;
-           words.innerHTML += limit -x.value.length;
-        }else{
-     
-        }
-   }
-   )}*/
+        
 })}}
